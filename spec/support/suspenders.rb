@@ -45,7 +45,7 @@ module SuspendersTestHelpers
   end
 
   def suspenders_bin
-    File.join(root_path, 'bin', 'suspenders')
+    File.join(root_path, 'bin', 'lo-suspenders')
   end
 
   def support_bin
