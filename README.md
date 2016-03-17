@@ -31,26 +31,37 @@ generated projectname/Gemfile.
 
 It includes application gems like:
 
-* [Autoprefixer Rails](https://github.com/ai/autoprefixer-rails) for CSS vendor prefixes
-* [Flutie](https://github.com/thoughtbot/flutie) for `page_title` and `body_class` view
-  helpers
+* [ActiveType](https://github.com/makandra/active_type) for building simple and
+  effective service objects
+* [Autoprefixer Rails](https://github.com/ai/autoprefixer-rails) for CSS vendor
+  prefixes
+* [Bootstrap 4](https://github.com/twbs/bootstrap-rubygem) for CSS and JS
+* [Flutie](https://github.com/thoughtbot/flutie) for `page_title` and
+  `body_class` view helpers
 * [High Voltage](https://github.com/thoughtbot/high_voltage) for static pages
 * [jQuery Rails](https://github.com/rails/jquery-rails) for jQuery
 * [New Relic RPM](https://github.com/newrelic/rpm) for monitoring performance
-* [Normalize](https://necolas.github.io/normalize.css/) for resetting browser styles
+* [Normalize](https://necolas.github.io/normalize.css/) for resetting browser
+  styles
 * [Postgres](https://github.com/ged/ruby-pg) for access to the Postgres database
 * [Rack Canonical Host](https://github.com/tylerhunt/rack-canonical-host) to
   ensure all requests are served from the same domain
-* [Rack Timeout](https://github.com/heroku/rack-timeout) to abort requests that are
-  taking too long
+* [Rack Timeout](https://github.com/heroku/rack-timeout) to abort requests that
+  are taking too long
 * [Recipient Interceptor](https://github.com/croaky/recipient_interceptor) to
   avoid accidentally sending emails to real people from staging
+* [Sidekiq](https://github.com/mperham/sidekiq) for background jobs
 * [Simple Form](https://github.com/plataformatec/simple_form) for form markup
   and style
+* [Slim](https://github.com/slim-template/slim-rails) for sexy Slim templates
 * [Puma](https://github.com/puma/puma) to serve HTTP requests
 
 And development gems like:
 
+* [Awesome Print](https://github.com/michaeldv/awesome_print) for pretty
+  printing with `ap`
+* [Brakeman](https://github.com/presidentbeef/brakeman) for detecting security
+  vulnerabilities
 * [Dotenv](https://github.com/bkeepers/dotenv) for loading environment variables
 * [Pry Rails](https://github.com/rweng/pry-rails) for interactively exploring
   objects
@@ -60,12 +71,16 @@ And development gems like:
   unused eager loading
 * [Bundler Audit](https://github.com/rubysec/bundler-audit) for scanning the
   Gemfile for insecure dependencies based on published CVEs
+* [Letter Opener](https://github.com/ryanb/letter_opener) for previewing emails
+   in the browser
 * [Spring](https://github.com/rails/spring) for fast Rails actions via
   pre-loading
 * [Web Console](https://github.com/rails/web-console) for better debugging via
   in-browser IRB consoles.
 * [Quiet Assets](https://github.com/evrone/quiet_assets) for muting assets
   pipeline log messages
+* [Xray](https://github.com/brentd/xray-rails) for inspecting view partials in
+  the browser
 
 And testing gems like:
 
@@ -96,6 +111,7 @@ Suspenders also comes with:
 * An automatically-created `SECRET_KEY_BASE` environment variable in all
   environments
 * Configuration for [CircleCI][circle] Continuous Integration (tests)
+* [Rack::Tracker](https://github.com/railslove/rack-tracker) for easy tracking
 
 [setup]: https://robots.thoughtbot.com/bin-setup
 [compress]: https://robots.thoughtbot.com/content-compression-with-rack-deflater
