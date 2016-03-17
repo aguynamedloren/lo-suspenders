@@ -1,19 +1,21 @@
-# Suspenders [![Build Status](https://secure.travis-ci.org/thoughtbot/suspenders.svg?branch=master)](http://travis-ci.org/thoughtbot/suspenders)
+## lo-suspenderss
 
-Suspenders is the base Rails application used at
-[thoughtbot](https://thoughtbot.com/).
+This is a customized fork of [thoughtbot's suspenders](https://github.com/thoughtbot/suspenders).  
 
-  ![Suspenders boy](http://media.tumblr.com/1TEAMALpseh5xzf0Jt6bcwSMo1_400.png)
+The primary differences are:
+* Slim templates
+* Bootstrap instead of thoughtbot's styles
+* Dev tools like ActiveType, Awesome Print, Letter Opener, and Xray
 
 ## Installation
 
-First install the suspenders gem:
+First install the lo-suspenders gem:
 
-    gem install suspenders
+    gem install lo-suspenders
 
 Then run:
 
-    suspenders projectname
+    lo-suspenders projectname
 
 This will create a Rails app in `projectname` using the latest version of Rails.
 
@@ -25,7 +27,7 @@ This will create a Rails app in `projectname` using the latest version of Rails.
 
 ## Gemfile
 
-To see the latest and greatest gems, look at Suspenders'
+To see the latest and greatest gems, look at lo-suspenders'
 [Gemfile](templates/Gemfile.erb), which will be appended to the default
 generated projectname/Gemfile.
 
@@ -98,7 +100,7 @@ And testing gems like:
 
 ## Other goodies
 
-Suspenders also comes with:
+lo-suspenders also comes with:
 
 * The [`./bin/setup`][setup] convention for new developer setup
 * The `./bin/deploy` convention for deploying to Heroku
@@ -120,115 +122,8 @@ Suspenders also comes with:
 [i18n]: https://github.com/thoughtbot/suspenders/pull/304
 [circle]: https://circleci.com/docs
 
-## Heroku
+## Credits
 
-You can optionally create Heroku staging and production apps:
-
-    suspenders app --heroku true
-
-This:
-
-* Creates a staging and production Heroku app
-* Sets them as `staging` and `production` Git remotes
-* Configures staging with `RACK_ENV` environment variable set
-  to `staging`
-* Adds the [Rails Stdout Logging][logging-gem] gem
-  to configure the app to log to standard out,
-  which is how [Heroku's logging][heroku-logging] works.
-* Creates a [Heroku Pipeline] for review apps
-
-[logging-gem]: https://github.com/heroku/rails_stdout_logging
-[heroku-logging]: https://devcenter.heroku.com/articles/logging#writing-to-your-log
-[Heroku Pipeline]: https://devcenter.heroku.com/articles/pipelines
-
-You can optionally specify alternate Heroku flags:
-
-    suspenders app \
-      --heroku true \
-      --heroku-flags "--region eu --addons newrelic,sendgrid,ssl"
-
-See all possible Heroku flags:
-
-    heroku help create
-
-## Git
-
-This will initialize a new git repository for your Rails app. You can
-bypass this with the `--skip-git` option:
-
-    suspenders app --skip-git true
-
-## GitHub
-
-You can optionally create a GitHub repository for the suspended Rails app. It
-requires that you have [Hub](https://github.com/github/hub) on your system:
-
-    curl http://hub.github.com/standalone -sLo ~/bin/hub && chmod +x ~/bin/hub
-    suspenders app --github organization/project
-
-This has the same effect as running:
-
-    hub create organization/project
-
-## Spring
-
-Suspenders uses [spring](https://github.com/rails/spring) by default.
-It makes Rails applications load faster, but it might introduce confusing issues
-around stale code not being refreshed.
-If you think your application is running old code, run `spring stop`.
-And if you'd rather not use spring, add `DISABLE_SPRING=1` to your login file.
-
-## Dependencies
-
-Suspenders requires the latest version of Ruby.
-
-Some gems included in Suspenders have native extensions. You should have GCC
-installed on your machine before generating an app with Suspenders.
-
-Use [OS X GCC Installer](https://github.com/kennethreitz/osx-gcc-installer/) for
-Snow Leopard (OS X 10.6).
-
-Use [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action)
-for Lion (OS X 10.7) or Mountain Lion (OS X 10.8).
-
-We use [Capybara Webkit](https://github.com/thoughtbot/capybara-webkit) for
-full-stack JavaScript integration testing. It requires QT. Instructions for
-installing QT are
-[here](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit).
-
-PostgreSQL needs to be installed and running for the `db:create` rake task.
-
-## Issues
-
-If you have problems, please create a
-[GitHub Issue](https://github.com/thoughtbot/suspenders/issues).
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Thank you, [contributors]!
-
-[contributors]: https://github.com/thoughtbot/suspenders/graphs/contributors
-
-## License
-
-Suspenders is Copyright © 2008-2016 thoughtbot.
-It is free software,
-and may be redistributed under the terms specified in the [LICENSE] file.
-
-[LICENSE]: LICENSE
-
-## About thoughtbot
-
-![thoughtbot](https://thoughtbot.com/logo.png)
-
-Suspenders is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-We love open source software!
-See [our other projects][community].
-We are [available for hire][hire].
-
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com?utm_source=github
+lo-suspenders is created by [aguynamedloren](https://github.com/aguynamedloren),
+based on [suspenders](https://github.com/thoughtbot/suspenders) by
+[thoughtbot, inc](https://thoughtbot.com/community).
