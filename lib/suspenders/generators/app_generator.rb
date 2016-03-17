@@ -95,7 +95,6 @@ module Suspenders
       build :set_up_hound
       build :generate_rspec
       build :configure_rspec
-      build :configure_background_jobs_for_rspec
       build :enable_database_cleaner
       build :provide_shoulda_matchers_config
       build :configure_spec_support_features
@@ -224,7 +223,6 @@ module Suspenders
 
     def outro
       say 'Congratulations! You just pulled our suspenders.'
-      say honeybadger_outro
     end
 
     protected
@@ -235,18 +233,6 @@ module Suspenders
 
     def using_active_record?
       !options[:skip_active_record]
-    end
-
-    private
-
-    def honeybadger_outro
-      "Run 'bundle exec honeybadger heroku install' with your API key#{honeybadger_message_suffix}."
-    end
-
-    def honeybadger_message_suffix
-      if options[:heroku]
-        " unless you're using the Heroku Honeybadger add-on"
-      end
     end
   end
 end
