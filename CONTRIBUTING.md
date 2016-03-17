@@ -36,11 +36,6 @@ Push to your fork.
 [commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 [pr]: https://github.com/thoughtbot/suspenders/compare/
 
-If [Hound] catches style violations,
-fix them.
-
-[hound]: https://houndci.com
-
 Wait for us.
 We try to at least comment on pull requests within one business day.
 We may suggest changes.
