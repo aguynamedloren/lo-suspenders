@@ -30,6 +30,7 @@ A fork of the thoughbot suspenders gem.
 
   s.add_development_dependency 'bullet', '~> 5.0'
   s.add_development_dependency 'rspec', '~> 3.2'
+  s.add_development_dependency 'pg', '~> 0.18.4'
   s.add_development_dependency 'simple_form', '~> 3.2'
   s.add_development_dependency 'title', '~> 0.0'
   s.add_development_dependency 'quiet_assets', '~> 1.1'
