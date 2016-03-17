@@ -28,7 +28,7 @@ A fork of the thoughbot suspenders gem.
   s.add_dependency 'bundler', '~> 1.3'
   s.add_dependency 'rails', Suspenders::RAILS_VERSION
 
-  s.add_development_dependency 'bullet', '~> 0.0'
+  s.add_development_dependency 'bullet', '~> 5.0'
   s.add_development_dependency 'rspec', '~> 3.2'
   s.add_development_dependency 'simple_form', '~> 3.2'
   s.add_development_dependency 'title', '~> 0.0'
