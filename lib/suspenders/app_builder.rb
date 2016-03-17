@@ -236,24 +236,26 @@ end
     end
 
     def create_shared_flashes
-      copy_file "_flashes.html.erb", "app/views/application/_flashes.html.erb"
+      copy_file "_flashes.slim", "app/views/application/_flashes.slim"
       copy_file "flashes_helper.rb", "app/helpers/flashes_helper.rb"
     end
 
     def create_shared_javascripts
-      copy_file '_javascript.html.erb', 'app/views/application/_javascript.html.erb'
+      copy_file '_javascript.slim', 'app/views/application/_javascript.slim'
     end
 
     def create_shared_css_overrides
       copy_file(
-        "_css_overrides.html.erb",
-        "app/views/application/_css_overrides.html.erb",
+        "_css_overrides.slim",
+        "app/views/application/_css_overrides.slim",
       )
     end
 
     def create_application_layout
-      template 'suspenders_layout.html.erb.erb',
-        'app/views/layouts/application.html.erb',
+      remove_file "app/views/layouts/application.html.erb"
+
+      template "suspenders_layout.tt",
+        "app/views/layouts/application.slim",
         force: true
     end
 
