@@ -30,6 +30,7 @@ A fork of the thoughbot suspenders gem.
 
   s.add_development_dependency 'rspec', '~> 3.2'
   s.add_development_dependency 'simple_form', '~> 3.2'
+  s.add_development_dependency 'title', '~> 0.0'
   s.add_development_dependency 'quiet_assets', '~> 1.1'
   s.add_development_dependency 'capybara-webkit', '~> 1.8'
 end
