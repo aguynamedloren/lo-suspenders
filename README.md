@@ -107,8 +107,6 @@ Suspenders also comes with:
   environments
 * Configuration for [CircleCI][circle] Continuous Integration (tests)
 * Configuration for [Hound][hound] Continuous Integration (style)
-* The analytics adapter [Segment][segment] (and therefore config for Google
-  Analytics, Intercom, Facebook Ads, Twitter Ads, etc.)
 
 [setup]: https://robots.thoughtbot.com/bin-setup
 [compress]: https://robots.thoughtbot.com/content-compression-with-rack-deflater
@@ -117,7 +115,6 @@ Suspenders also comes with:
 [i18n]: https://github.com/thoughtbot/suspenders/pull/304
 [circle]: https://circleci.com/docs
 [hound]: https://houndci.com
-[segment]: https://segment.com
 
 ## Heroku
 

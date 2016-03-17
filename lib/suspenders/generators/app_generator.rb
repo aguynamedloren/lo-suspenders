@@ -50,7 +50,6 @@ module Suspenders
       invoke :setup_database
       invoke :create_heroku_apps
       invoke :create_github_repo
-      invoke :setup_segment
       invoke :setup_bundler_audit
       invoke :setup_spring
       invoke :outro
@@ -115,6 +114,7 @@ module Suspenders
       build :configure_rack_timeout
       build :enable_rack_canonical_host
       build :enable_rack_deflater
+      build :enable_rack_tracker
       build :setup_asset_host
     end
 
@@ -192,11 +192,6 @@ module Suspenders
         say 'Creating Github repo'
         build :create_github_repo, options[:github]
       end
-    end
-
-    def setup_segment
-      say 'Setting up Segment'
-      build :setup_segment
     end
 
     def setup_dotfiles

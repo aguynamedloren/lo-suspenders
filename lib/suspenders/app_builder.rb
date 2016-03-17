@@ -180,6 +180,23 @@ module Suspenders
       )
     end
 
+    def enable_rack_tracker
+      config = <<-RUBY
+
+  config.middleware.use(Rack::Tracker) do
+    if ENV["GOOGLE_ANALYTICS_KEY"]
+      handler :google_analytics, { tracker: ENV["GOOGLE_ANALYTICS_KEY"] }
+    end
+  end
+      RUBY
+
+      inject_into_file(
+        "config/environments/production.rb",
+        config,
+        after: "Rails.application.configure do",
+      )
+    end
+
     def setup_asset_host
       replace_in_file 'config/environments/production.rb',
         "# config.action_controller.asset_host = 'http://assets.example.com'",
@@ -421,11 +438,6 @@ you can deploy to staging and production with:
 
     def create_github_repo(repo_name)
       run "hub create #{repo_name}"
-    end
-
-    def setup_segment
-      copy_file '_analytics.html.erb',
-        'app/views/application/_analytics.html.erb'
     end
 
     def setup_bundler_audit
