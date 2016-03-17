@@ -140,7 +140,7 @@ RSpec.describe "Suspend a new project with default configuration" do
   it "configs :test email delivery method for development" do
     dev_env_file = IO.read("#{project_path}/config/environments/development.rb")
     expect(dev_env_file).
-      to match(/^ +config.action_mailer.delivery_method = :file$/)
+      to match(/^ +config.action_mailer.delivery_method = :letter_opener$/)
   end
 
   it "uses APPLICATION_HOST, not HOST in the production config" do
