@@ -357,6 +357,12 @@ Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i
       copy_file "Procfile", "Procfile"
     end
 
+    def setup_javascript
+      remove_file "app/assets/stylesheets/application.js"
+      copy_file "application.js",
+                "app/assets/javascripts/application.js"
+    end
+
     def setup_stylesheets
       remove_file "app/assets/stylesheets/application.css"
       copy_file "application.scss",
