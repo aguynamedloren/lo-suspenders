@@ -32,16 +32,11 @@ generated projectname/Gemfile.
 It includes application gems like:
 
 * [Autoprefixer Rails](https://github.com/ai/autoprefixer-rails) for CSS vendor prefixes
-* [Bourbon](https://github.com/thoughtbot/bourbon) for Sass mixins
-* [Bitters](https://github.com/thoughtbot/bitters) for scaffold application styles
-* [Delayed Job](https://github.com/collectiveidea/delayed_job) for background
-  processing
 * [Flutie](https://github.com/thoughtbot/flutie) for `page_title` and `body_class` view
   helpers
 * [High Voltage](https://github.com/thoughtbot/high_voltage) for static pages
 * [Honeybadger](https://honeybadger.io) for exception notification
 * [jQuery Rails](https://github.com/rails/jquery-rails) for jQuery
-* [Neat](https://github.com/thoughtbot/neat) for semantic grids
 * [New Relic RPM](https://github.com/newrelic/rpm) for monitoring performance
 * [Normalize](https://necolas.github.io/normalize.css/) for resetting browser styles
 * [Postgres](https://github.com/ged/ruby-pg) for access to the Postgres database
@@ -51,12 +46,8 @@ It includes application gems like:
   taking too long
 * [Recipient Interceptor](https://github.com/croaky/recipient_interceptor) to
   avoid accidentally sending emails to real people from staging
-* [Refills](https://github.com/thoughtbot/refills) for “copy-paste” components
-  and patterns based on Bourbon, Neat and Bitters
 * [Simple Form](https://github.com/plataformatec/simple_form) for form markup
   and style
-* [Title](https://github.com/calebthompson/title) for storing titles in
-  translations
 * [Puma](https://github.com/puma/puma) to serve HTTP requests
 
 And development gems like:
@@ -106,7 +97,6 @@ Suspenders also comes with:
 * An automatically-created `SECRET_KEY_BASE` environment variable in all
   environments
 * Configuration for [CircleCI][circle] Continuous Integration (tests)
-* Configuration for [Hound][hound] Continuous Integration (style)
 
 [setup]: https://robots.thoughtbot.com/bin-setup
 [compress]: https://robots.thoughtbot.com/content-compression-with-rack-deflater
@@ -114,7 +104,6 @@ Suspenders also comes with:
 [binstub]: https://github.com/thoughtbot/suspenders/pull/282
 [i18n]: https://github.com/thoughtbot/suspenders/pull/304
 [circle]: https://circleci.com/docs
-[hound]: https://houndci.com
 
 ## Heroku
 
