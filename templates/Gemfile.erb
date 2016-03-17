@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "<%= Suspenders::RUBY_VERSION %>"
 
+gem "active_type"
 gem "autoprefixer-rails"
 gem "flutie"
 gem "high_voltage"
@@ -21,10 +22,13 @@ gem "sprockets-es6"
 gem "uglifier"
 
 group :development do
+  gem "awesome_print"
+  gem "brakeman", require: false
   gem "quiet_assets"
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
+  gem "xray-rails"
 end
 
 group :development, :test do
